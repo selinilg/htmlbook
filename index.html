@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon"  href="img/2.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<title>HTML-textbook</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<iframe src="header.html" class="header-frame"></iframe>
+	<div class="page">
+		<div class="sidebar">
+			<iframe src="menu.html#index" class="iframe-sdb"></iframe>
+		</div>
+		<article class="main">
+			<h1 class="text-sise">HTML</h1>
+			<p>HTML (HyperText Markup Language, язык разметки гипертекста) — это система верстки, которая определяет, как и какие элементы должны располагаться на веб-странице. Информация на сайте, способ ее представления и оформления зависят исключительно от разработчика и тех целей, которые он перед собой ставит.</p>		
+			<section role="article"><h1><span class="text-sise">Теги</span></h1><p>Чтобы браузер при отображении документа понимал, что имеет дело не с простым
+		    текстом, а с элементом форматирования и применяются теги. Общий синтаксис написания
+		    тегов следующий.</p><pre style="display: none;"><code class="no-buttons">&lt;тег атрибут1="значение" атрибут2="значение"&gt;
+			&lt;тег атрибут1="значение" атрибут2="значение"&gt;...&lt;/тег&gt;</code></pre><pre class="htmlbook-code"><code class="no-buttons xml"><span class="tag">&lt;тег атрибут1="значение" атрибут2="значение"&gt;</span>
+			<span class="tag">&lt;тег атрибут1="значение" атрибут2="значение"&gt;</span>...<span class="tag">&lt;/тег&gt;</span></code></pre><p>Как видно из данного примера, теги бывают двух типов&nbsp;— одиночные и парные
+		    (контейнеры). Одиночный тег используется самостоятельно, а парный может включать
+		    внутри себя другие теги или текст. У тегов допустимы различные атрибуты, которые
+		    разделяются между собой пробелом. Впрочем, есть теги без всяких дополнительных
+		    атрибутов. Условно атрибуты можно подразделить на обязательные, они непременно
+		    должны присутствовать, и необязательные, их добавление зависит от цели применения
+		    тега.</p><p> В примере&nbsp; показан типичный HTML-документ с тегами и текстом.</p><p class="exampleTitle2">Пример. Теги в документе </p><pre id="example_0_c" class="htmlbook-code" style="display: none;"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+			 "http://www.w3.org/TR/html4/strict.dtd"&gt;
+			&lt;html&gt;
+			 &lt;head&gt;
+			   &lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;
+			   &lt;title&gt;Lorem ipsum&lt;/title&gt;
+			  &lt;/head&gt;
+			  &lt;body&gt;
+		    &lt;p&gt;Lorem ipsum dolor sit amet consectetuer cursus pede pellentesque 
+		      vitae pretium. Tristique mus at elit lobortis libero Sed vestibulum ut 
+		      eleifend habitasse. Quis Nam Mauris adipiscing Integer ligula dictum 
+		      sed at enim urna. Et scelerisque id et nibh dui tincidunt Curabitur faucibus 
+		      elit massa. Tincidunt et gravida Phasellus eget parturient faucibus tellus 
+		      at justo sollicitudin. Mi nulla ut adipiscing.&lt;/p&gt;
+			   &lt;/body&gt;
+			&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+			 "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+			<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+			 <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+			   <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> http-equiv=<span class="value">"content-type"</span></span><span class="attribute"> content=<span class="value">"text/html; charset=utf-8"</span></span>&gt;</span>
+			   <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Lorem ipsum<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+			  <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+			  <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+			    <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Lorem ipsum dolor sit amet consectetuer cursus pede pellentesque 
+			      vitae pretium. Tristique mus at elit lobortis libero Sed vestibulum ut 
+			      eleifend habitasse. Quis Nam Mauris adipiscing Integer ligula dictum 
+			      sed at enim urna. Et scelerisque id et nibh dui tincidunt Curabitur faucibus 
+			      elit massa. Tincidunt et gravida Phasellus eget parturient faucibus tellus 
+			      at justo sollicitudin. Mi nulla ut adipiscing.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+			   <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+			<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>	
+		</article>
+	</div>
+	<footer>
+		<div class="copyright">© 2023 Гатауллина Селина</div>
+		<div>
+			<a href="https://vk.com/school7birsk" target="_blank">МБОУ СОШ №7</a>
+		</div>
+	</footer>
+</body>
+</html>

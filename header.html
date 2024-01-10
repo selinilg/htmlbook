@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon"  href="img/2.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<title>HTML-textbook</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		header {
+			height: 42px;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			padding: 10px 25px;
+			box-shadow: rgb(195 180 183) 0 1px 17px;
+			display: flex;
+			align-items: center;
+			background-color: white;
+			z-index: 1;
+		}
+		header .header-title {
+			font-size: 25px;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			color: #2e2e2e;
+		}
+		header .header-title div {
+			margin-left: 20px;
+		}
+		.main-menu {
+			display: none;
+			position: absolute;
+			top: 40px;
+			left: 10px;
+			border: 0;
+			background-color: #ffffff;
+			border-radius: 5px;
+			list-style-type: none;
+			box-shadow: #afa5a7 2px 2px 7px 0;
+			text-transform: uppercase;
+		    font-size: 14px;
+		    padding: 0;
+		}
+		.main-menu::before {
+		    content: "";
+		    border: 12px solid transparent;
+		    border-bottom: 10px solid #977a7a;
+		    position: absolute;
+		    top: -22px;
+		    left: 24px;
+		}
+		.main-menu::after {
+		    content: "";
+		    border: 12px solid transparent;
+		    border-bottom: 10px solid #ffffff;
+		    position: absolute;
+		    top: -22px;
+		    left: 24px;
+		}
+		.main-menu li {
+			transition: 200ms;
+		}
+		.main-menu li:hover {
+			background-color: #efefef;
+		}
+		.main-menu li:hover i {
+			rotate: 360deg;
+			transition: 600ms;
+		}
+		.main-menu a {
+			text-decoration: none;
+			color: #2e2e2e;
+			padding: 13px 25px;
+			display: block;
+		}
+		.main-menu-button { 
+			margin-right: 15px;
+			position: relative;
+			border: 0;
+			background: none;
+			padding: 10px;
+			height: 44px;
+			transition: 500ms;
+			border-radius: 50%;
+		} 
+		@media (min-width: 800px) {
+			.main-menu-button {
+				display: none;
+			}
+		}
+		.main-menu-button:hover {
+			background-color: #d5d5d5;
+		}
+		.main-menu-root:focus-within .main-menu {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="main-menu-root">
+			<button class="main-menu-button">
+				<img src="img/1.svg" width="24" height="24">
+			</button>
+			<ul class="main-menu">
+				<li id="index"> 
+					<a href="index.html" target="_parent">
+						<i class="fa-solid fa-house mr-1"></i>
+						Главная страница
+					</a> 
+				</li>
+				<li id="index1"> 
+					<a href="index1.html" target="_parent">
+						<i class="fa-solid fa-file-code mr-1"></i>
+						Основные теги
+					</a> 
+				</li>
+				<li id="index2"> 
+					<a href="index2.html" target="_parent">
+						<i class="fa-solid fa-code mr-1"></i>
+						 Семантические теги
+					</a> 
+				</li>
+				<li id="index3"> 
+					<a href="index3.html" target="_parent">
+						<i class="fa-regular fa-folder mr-1"></i>
+						Теги form
+					</a>
+			    </li>
+				<li id="index4"> 
+					<a href="index4.html" target="_parent">
+						<i class="fa-solid fa-list-ul mr-1"></i>
+						Списки
+					</a> 
+				</li>
+				<li id="index5"> 
+					<a href="index5.html" target="_parent">
+						<i class="fa-solid fa-underline mr-1"></i>
+						Текстовые теги
+					</a> 
+				</li>
+				<li id="index6"> 
+					<a href="index6.html" target="_parent">
+						<i class="fa-solid fa-table mr-1"></i>
+						Таблицы
+					</a> 
+				</li>
+			</ul>
+		</div>
+		<a href="index.html" class="header-title" tabindex="-1" target="_parent">
+			<img src="img/1.png" width="43px" height="43px">
+			<div>HTML-textbook</div>
+		</a>
+	</header>
+</body>
+</html>

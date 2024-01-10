@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon"  href="img/2.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<title>HTML-textbook</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<iframe src="header.html" class="header-frame"></iframe>
+	<div class="page">
+		<div class="sidebar">
+		<iframe src="menu.html#index1" class="iframe-sdb"></iframe>
+		</div>
+		<article class="main">
+		<section role="article"><h1><span class="text-sise">Тег &lt;html&gt;</span></h1><h3>Описание</h3><p>Тег <span class="tag">&lt;html&gt;</span> является контейнером, который заключает 
+    в себе все содержимое веб-страницы, включая теги <span class="tag">&lt;head&gt;</span> и <span class="tag">&lt;body&gt;</span>. Открывающий и закрывающий теги <span class="tag">&lt;html&gt;</span> в документе необязательны, но хороший стиль диктует непременное их использование. 
+    Как правило, тег <span class="tag">&lt;html&gt;</span> идет в документе вторым, 
+    после определения типа документа, устанавливаемого 
+    через элемент <span class="tag">&lt;!DOCTYPE&gt;</span>. Закрывающий тег <span class="tag">&lt;html&gt;</span> должен всегда стоять в документе последним. </p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;html&gt;
+  ...
+&lt;/html&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><p class="exampleTitle"><h3>Пример</h3></p></pre><pre class="htmlbook-code"><code class="no-buttons html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+   <span class="comment">&lt;!-- Этот раздел предназначен для заголовка страницы и технической информации. --&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+   <span class="comment">&lt;!-- А здесь надо размещать все, что хочется увидеть на странице. --&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre></section>
+<section role="article"><h1><span class="text-sise">Тег &lt;head&gt;</span></h1><h3>Описание </h3><p> Тег <span class="tag">&lt;head&gt;</span> предназначен для хранения других 
+    элементов, цель которых&nbsp;— помочь браузеру в работе с данными. Также внутри 
+    контейнера <span class="tag">&lt;head&gt;</span> находятся метатеги, которые используются 
+    для хранения информации предназначенной для браузеров и поисковых систем. Например, 
+    механизмы поисковых систем обращаются к метатегам для получения описания сайта, 
+    ключевых слов и других данных.</p><p> Содержимое тега <span class="tag">&lt;head&gt;</span> не отображается напрямую 
+    на веб-странице, за исключением тега <span class="tag">&lt;title&gt;</span> устанавливающего заголовок окна веб-страницы.</p><p>Внутри контейнера <span class="tag">&lt;head&gt;</span> допускается размещать следующие 
+    элементы: <span class="tag">&lt;base&gt;</span>, <span class="tag">&lt;basefont&gt;</span>, <span class="tag">&lt;bgsound&gt;</span>, <span class="tag">&lt;link&gt;</span>, <span class="tag">&lt;meta&gt;</span>, <span class="tag">&lt;script&gt;</span>, <span class="tag">&lt;style&gt;</span>, <span class="tag">&lt;title&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;head&gt;
+  ... 
+&lt;/head&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  ... 
+<span class="tag">&lt;/<span class="keyword">head</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre style="display: none;"><code class="no-buttons">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+   &lt;!-- Этот раздел предназначен для заголовка страницы и технической информации. --&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+   &lt;!-- А здесь надо размещать все, что хочется увидеть на странице. --&gt;
+  &lt;/body&gt;
+ &lt;/html&gt;</code></pre><pre class="htmlbook-code"><code class="no-buttons html"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+   <span class="comment">&lt;!-- Этот раздел предназначен для заголовка страницы и технической информации. --&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+   <span class="comment">&lt;!-- А здесь надо размещать все, что хочется увидеть на странице. --&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre></section>
+ 	<section role="article"><h1><span class="text-sise">Тег &lt;style&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;style&gt;</span> применяется для определения стилей 
+    элементов веб-страницы. Тег <span class="tag">&lt;style&gt;</span> необходимо использовать внутри контейнера <span class="tag">&lt;head&gt;</span>. Можно 
+    задавать более чем один тег <span class="tag">&lt;style&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;head&gt;
+  &lt;style type="text/css"&gt;
+   ...
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">style</span><span class="attribute"> type=<span class="value">"text/css"</span></span>&gt;</span><span class="css">
+   ...
+  </span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">head</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег STYLE&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+   h1 { 
+    font-size: 120%; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #333366;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+
+   &lt;H1&gt;Hello, world!&lt;/H1&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег STYLE<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">style</span><span class="attribute"> type=<span class="value">"text/css"</span></span>&gt;</span><span class="css">
+   <span class="keyword">h1</span> <span class="rules">{ 
+    <span class="rule"><span class="keyword">font-size</span>:<span class="value"> <span class="number">120</span>%</span>;</span> 
+    <span class="rule"><span class="keyword">font-family</span>:<span class="value"> Verdana, Arial, Helvetica, sans-serif</span>;</span> 
+    <span class="rule"><span class="keyword">color</span>:<span class="value"> <span class="hexcolor">#333366</span></span>;</span>
+   }</span>
+  </span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+   <span class="tag">&lt;<span class="keyword">H1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="keyword">H1</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;title&gt;</span></h1><h3>Описание</h3><p> Определяет заголовок документа. Элемент <span class="tag">&lt;title&gt;</span> не является частью документа и не показывается напрямую на веб-странице. В операционной 
+    системе Windows текст заголовка отображается в левом верхнем углу окна браузера. Допускается использовать только один тег <span class="tag">&lt;title&gt;</span> на документ и размещать его в контейнере <span class="tag">&lt;head&gt;</span>. </p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;head&gt;
+  &lt;title&gt;Заголовок&lt;/title&gt;
+&lt;/head&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Заголовок<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">head</span>&gt;</span></code></pre><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;htmlbook.ru - Как правильно писать заголовок страницы&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+
+  &lt;p&gt;...&lt;/p&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>htmlbook.ru - Как правильно писать заголовок страницы<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;body&gt;</span></h1><h3>Описание </h3><p> Элемент <span class="tag">&lt;body&gt;</span> предназначен для хранения содержания 
+    веб-страницы (контента), отображаемого в окне браузера. Информацию, которую 
+    следует выводить в документе, следует располагать именно внутри контейнера <span class="tag">&lt;body&gt;</span>. 
+    К такой информации относится текст, изображения, теги, скрипты JavaScript и 
+    т.д.</p><p> Открывающий и закрывающий теги <span class="tag">&lt;body&gt;</span> на веб-странице являются обязательными.</p><h3>Синтаксис </h3><pre style="display: none;"><code class="no-buttons">&lt;body&gt;
+  ...
+&lt;/body&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="keyword">body</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Тег BODY&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+ &lt;/head&gt;
+ &lt;body onload="alert('Документ загружен')"&gt;
+
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.&lt;/p&gt;
+  &lt;p&gt;Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper 
+  suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег BODY<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span><span class="attribute"> onload=<span class="value">"alert('Документ загружен')"</span></span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper 
+  suscipit lobortis nisl ut aliquip ex ea commodo consequat.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+</article>
+	</div>
+	<footer>
+		<div class="copyright">© 2023 Гатауллина Селина</div>
+		<div>
+			<a href="https://vk.com/school7birsk" target="_blank">МБОУ СОШ №7</a>
+		</div>
+	</footer>
+</body>
+</html>

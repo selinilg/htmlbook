@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon"  href="img/2.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<title>HTML-textbook</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<iframe src="header.html" class="header-frame"></iframe>
+	<div class="page">
+		<div class="sidebar">
+		<iframe src="menu.html#index2" class="iframe-sdb"></iframe>
+		</div>
+		<article class="main">
+			<section role="article"><h1><span class="text-sise">Тег &lt;header&gt;</span></h1><h3>Описание</h3><p>Тег <span class="tag">&lt;header&gt;</span> задает «шапку» сайта или раздела, в которой обычно располагается заголовок.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;header&gt;
+&lt;/header&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">header</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">header</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;header&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Персональный сайт Селины&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Добро пожаловать!&lt;/h2&gt;
+    &lt;p&gt;Рада приветствовать вас на своем сайте.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;footer&gt;
+    Copyright
+  &lt;/footer&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>header<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Персональный сайт Селины<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">header</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">article</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">h2</span>&gt;</span>Добро пожаловать!<span class="tag">&lt;/<span class="keyword">h2</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Рада приветствовать вас на своем сайте.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">article</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">footer</span>&gt;</span>
+    Copyright
+  <span class="tag">&lt;/<span class="keyword">footer</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span> 
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;nav&gt;</span></h1><h3>Описание</h3><p>Тег <span class="tag">&lt;nav&gt;</span> задает навигацию по сайту. Если на странице несколько блоков ссылок, то в <span class="tag">&lt;nav&gt;</span> обычно помещают приоритетные ссылки. Также допустимо использовать несколько тегов <span class="tag">&lt;nav&gt;</span> в документе. Запрещается вкладывать <span class="tag">&lt;nav&gt;</span> внутрь <span class="tag">&lt;address&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;nav&gt;ссылки&lt;/nav&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">nav</span>&gt;</span>ссылки<span class="tag">&lt;/<span class="keyword">nav</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;nav&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Чебурашка и крокодил Гена&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;nav&gt;&lt;a href="1.html"&gt;Чебурашка&lt;/a&gt; | &lt;a href="2.html"&gt;Гена&lt;/a&gt; |
+       &lt;a href="3.html"&gt;Шапокляк&lt;/a&gt; | &lt;a href="4.html"&gt;Лариска&lt;/a&gt;&lt;/nav&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Добро пожаловать!&lt;/h2&gt;
+  &lt;/article&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>nav<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Чебурашка и крокодил Гена<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">header</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">nav</span>&gt;</span><span class="tag">&lt;<span class="keyword">a</span><span class="attribute"> href=<span class="value">"1.html"</span></span>&gt;</span>Чебурашка<span class="tag">&lt;/<span class="keyword">a</span>&gt;</span> | <span class="tag">&lt;<span class="keyword">a</span><span class="attribute"> href=<span class="value">"2.html"</span></span>&gt;</span>Гена<span class="tag">&lt;/<span class="keyword">a</span>&gt;</span> |
+       <span class="tag">&lt;<span class="keyword">a</span><span class="attribute"> href=<span class="value">"3.html"</span></span>&gt;</span>Шапокляк<span class="tag">&lt;/<span class="keyword">a</span>&gt;</span> | <span class="tag">&lt;<span class="keyword">a</span><span class="attribute"> href=<span class="value">"4.html"</span></span>&gt;</span>Лариска<span class="tag">&lt;/<span class="keyword">a</span>&gt;</span><span class="tag">&lt;/<span class="keyword">nav</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">article</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">h2</span>&gt;</span>Добро пожаловать!<span class="tag">&lt;/<span class="keyword">h2</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">article</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span> 
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/nav.png"></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;main&gt;</span></h1><h3>Описание</h3><p>Элемент <span class="tag">&lt;main&gt;</span> предназначен для основного содержимого документа. Содержимое должно быть уникальным и не включать типовые блоки вроде шапки сайта, подвала, навигации, боковой панели, формы поиска и т.&nbsp;п. </p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;main&gt;
+&lt;/main&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">main</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">main</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;main&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;h1&gt;Следы невиданных зверей&lt;/h1&gt;
+  &lt;main&gt;
+    История о том, как возле столовой появились загадочные розовые 
+    следы с шестью пальцами, и почему это случилось. 
+  &lt;/main&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>main<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Следы невиданных зверей<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">main</span>&gt;</span>
+    История о том, как возле столовой появились загадочные розовые 
+    следы с шестью пальцами, и почему это случилось. 
+  <span class="tag">&lt;/<span class="keyword">main</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span> 
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;article&gt;</span></h1><h3>Описание</h3><p>Тег <span class="tag">&lt;article&gt;</span> задает содержание сайта вроде новости, статьи, записи  блога, форума или др. </p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;article&gt;
+&lt;/article&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">article</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">article</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;article&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Следы невиданных зверей&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;article&gt;
+    История о том, как возле столовой появились загадочные розовые 
+    следы с шестью пальцами, и почему это случилось. 
+  &lt;/article&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>article<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Следы невиданных зверей<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">header</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">article</span>&gt;</span>
+    История о том, как возле столовой появились загадочные розовые 
+    следы с шестью пальцами, и почему это случилось. 
+  <span class="tag">&lt;/<span class="keyword">article</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span> 
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;section&gt;</span></h1><h3>Описание</h3><p>Задаёт раздел документа, может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне и др. Раздел обычно содержит заголовок. Допускается вкладывать один тег <span class="tag">&lt;section&gt;</span> внутрь другого.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;section&gt;
+&lt;/section&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">section</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">section</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;section&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;section&gt;
+   &lt;h1&gt;Съёмки фильма Полипропилен&lt;/h1&gt;
+   &lt;p&gt;История о том, как снимали фильм, где герои отдыхали на пляже, 
+   потом пришёл антагонист, избил протагонистов, сбросил их в бассейн, 
+   и что из этого получилось.&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+   &lt;h1&gt;Хороший язык&lt;/h1&gt;
+   &lt;p&gt;История о том, как проходила студия изучения языка эсперанто, 
+   в то время, как над ней, на веранде велась студия приколистов, 
+   где травились анекдоты, и что из этого получилось.&lt;/p&gt;
+  &lt;/section&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>section<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">section</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Съёмки фильма Полипропилен<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>История о том, как снимали фильм, где герои отдыхали на пляже, 
+   потом пришёл антагонист, избил протагонистов, сбросил их в бассейн, 
+   и что из этого получилось.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">section</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">section</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Хороший язык<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>История о том, как проходила студия изучения языка эсперанто, 
+   в то время, как над ней, на веранде велась студия приколистов, 
+   где травились анекдоты, и что из этого получилось.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">section</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;aside&gt;</span></h1><h3>Описание</h3><p>Определяет блок сбоку от контента для размещения рубрик,  ссылок на архив, меток и другой информации. Такой блок, как правило, называется  «сайдбар» или «боковая панель».</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;aside&gt;
+&lt;/aside&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">aside</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">aside</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;aside&lt;/title&gt;
+  &lt;script&gt;
+   document.createElement('aside');
+   document.createElement('article');
+  &lt;/script&gt;
+  &lt;style&gt;
+   aside {
+    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
+    float: right;
+   }
+   article {
+    margin-right: 240px;
+    display: block;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;header&gt;&lt;h1&gt;Байки&lt;/h1&gt;&lt;/header&gt;
+  &lt;aside&gt;
+   &lt;p&gt;Экономьте электричество&lt;/p&gt;
+   &lt;p&gt;Хороший язык&lt;/p&gt;
+   &lt;p&gt;Чья палка больше&lt;/p&gt;
+  &lt;/aside&gt;
+  &lt;article&gt;
+   История о том, как приходилось экономить электричество, 
+   какие меры для этого принимались, и куда оно на самом деле уходило.
+  &lt;/article&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>aside<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">script</span>&gt;</span><span class="javascript">
+   document.createElement(<span class="string">'aside'</span>);
+   document.createElement(<span class="string">'article'</span>);
+  </span><span class="tag">&lt;/<span class="keyword">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">style</span>&gt;</span><span class="css">
+   <span class="keyword">aside</span> <span class="rules">{
+    <span class="rule"><span class="keyword">background</span>:<span class="value"> <span class="hexcolor">#f0f0f0</span></span>;</span>
+    <span class="rule"><span class="keyword">padding</span>:<span class="value"> <span class="number">10</span>px</span>;</span>
+    <span class="rule"><span class="keyword">width</span>:<span class="value"> <span class="number">200</span>px</span>;</span>
+    <span class="rule"><span class="keyword">float</span>:<span class="value"> right</span>;</span>
+   }</span>
+   <span class="keyword">article</span> <span class="rules">{
+    <span class="rule"><span class="keyword">margin-right</span>:<span class="value"> <span class="number">240</span>px</span>;</span>
+    <span class="rule"><span class="keyword">display</span>:<span class="value"> block</span>;</span>
+   }</span>
+  </span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">header</span>&gt;</span><span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Байки<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span><span class="tag">&lt;/<span class="keyword">header</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">aside</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Экономьте электричество<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Хороший язык<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Чья палка больше<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">aside</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">article</span>&gt;</span>
+   История о том, как приходилось экономить электричество, 
+   какие меры для этого принимались, и куда оно на самом деле уходило.
+  <span class="tag">&lt;/<span class="keyword">article</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span> 
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/aside.png"></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;footer&gt;</span></h1><h3>Описание</h3><p>Тег <span class="tag">&lt;footer&gt;</span> задаёт «подвал» сайта или раздела, в нём может располагаться имя автора, дата документа, контактная и правовая информация.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;footer&gt;
+&lt;/footer&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">footer</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">footer</span>&gt;</span></code></pre><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;footer&lt;/title&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Персональный сайт Селины&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Добро пожаловать!&lt;/h2&gt;
+    &lt;p&gt;Рада приветствовать вас на своем сайте.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;footer&gt;
+    Copyright
+  &lt;/footer&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>footer<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span> 
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">header</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">h1</span>&gt;</span>Персональный сайт Селины<span class="tag">&lt;/<span class="keyword">h1</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">header</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">article</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">h2</span>&gt;</span>Добро пожаловать!<span class="tag">&lt;/<span class="keyword">h2</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Рада приветствовать вас на своем сайте.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">article</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">footer</span>&gt;</span>
+    Copyright
+  <span class="tag">&lt;/<span class="keyword">footer</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span> 
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;div&gt;</span></h1><h3>Описание </h3><p> Элемент <span class="tag">&lt;div&gt; </span>является блочным элементом и 
+    предназначен для выделения фрагмента документа с целью изменения вида содержимого. 
+    Как правило, вид блока управляется с помощью стилей. Чтобы не описывать каждый 
+    раз стиль внутри тега, можно выделить стиль во внешнюю таблицу стилей, а для 
+    тега добавить атрибут <span class="attribute">class</span> или <span class="attribute">id</span> с именем селектора. </p><p>Как и при использовании других блочных элементов, содержимое тега <span class="tag">&lt;div&gt; </span> всегда начинается с новой строки. После него также добавляется перенос строки.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;div&gt;...&lt;/div&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">div</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">div</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег DIV&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+   .block1 { 
+    width: 200px; 
+    background: #ccc;
+    padding: 5px;
+    padding-right: 20px; 
+    border: solid 1px black; 
+    float: left;
+   }
+   .block2 { 
+    width: 200px; 
+    background: #fc0; 
+    padding: 5px; 
+    border: solid 1px black; 
+    float: left; 
+    position: relative; 
+    top: 40px; 
+    left: -70px; 
+   }
+  &lt;/style&gt; 
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;div class="block1"&gt;Lorem ipsum dolor sit amet, consectetuer 
+   adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet 
+   dolore magna aliguam erat volutpat.&lt;/div&gt;
+  &lt;div class="block2"&gt;Ut wisis enim ad minim veniam, quis nostrud 
+   exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+   ea commodo consequat.&lt;/div&gt; 
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег DIV<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">style</span><span class="attribute"> type=<span class="value">"text/css"</span></span>&gt;</span><span class="css">
+   <span class="class">.block1</span> <span class="rules">{ 
+    <span class="rule"><span class="keyword">width</span>:<span class="value"> <span class="number">200</span>px</span>;</span> 
+    <span class="rule"><span class="keyword">background</span>:<span class="value"> <span class="hexcolor">#ccc</span></span>;</span>
+    <span class="rule"><span class="keyword">padding</span>:<span class="value"> <span class="number">5</span>px</span>;</span>
+    <span class="rule"><span class="keyword">padding-right</span>:<span class="value"> <span class="number">20</span>px</span>;</span> 
+    <span class="rule"><span class="keyword">border</span>:<span class="value"> solid <span class="number">1</span>px black</span>;</span> 
+    <span class="rule"><span class="keyword">float</span>:<span class="value"> left</span>;</span>
+   }</span>
+   <span class="class">.block2</span> <span class="rules">{ 
+    <span class="rule"><span class="keyword">width</span>:<span class="value"> <span class="number">200</span>px</span>;</span> 
+    <span class="rule"><span class="keyword">background</span>:<span class="value"> <span class="hexcolor">#fc0</span></span>;</span> 
+    <span class="rule"><span class="keyword">padding</span>:<span class="value"> <span class="number">5</span>px</span>;</span> 
+    <span class="rule"><span class="keyword">border</span>:<span class="value"> solid <span class="number">1</span>px black</span>;</span> 
+    <span class="rule"><span class="keyword">float</span>:<span class="value"> left</span>;</span> 
+    <span class="rule"><span class="keyword">position</span>:<span class="value"> relative</span>;</span> 
+    <span class="rule"><span class="keyword">top</span>:<span class="value"> <span class="number">40</span>px</span>;</span> 
+    <span class="rule"><span class="keyword">left</span>:<span class="value"> -<span class="number">70</span>px</span>;</span> 
+   }</span>
+  </span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span> 
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">div</span><span class="attribute"> class=<span class="value">"block1"</span></span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer 
+   adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet 
+   dolore magna aliguam erat volutpat.<span class="tag">&lt;/<span class="keyword">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">div</span><span class="attribute"> class=<span class="value">"block2"</span></span>&gt;</span>Ut wisis enim ad minim veniam, quis nostrud 
+   exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+   ea commodo consequat.<span class="tag">&lt;/<span class="keyword">div</span>&gt;</span> 
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/div.png"></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;span&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;span&gt;</span> предназначен для определения строчных
+    элементов документа. В отличие от блочных элементов, таких как <span class="tag">&lt;table&gt;</span>, <span class="tag">&lt;p&gt;</span> или <span class="tag">&lt;div&gt;</span>, с помощью тега <span class="tag">&lt;span&gt;</span> можно выделить часть информации внутри других 
+    тегов и установить для нее свой стиль. Например, внутри абзаца (тега <span class="tag">&lt;p&gt;</span>) 
+    можно изменить цвет и размер первой буквы, если добавить начальный и конечный 
+    тег <span class="tag">&lt;span&gt;</span> и определить для него стиль текста. Чтобы 
+    не описывать каждый раз стиль внутри тега, можно выделить стиль во внешнюю таблицу 
+    стилей, а для тега добавить атрибут <span class="attribute">class</span> или <span class="attribute">id</span> с именем селектора.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;span&gt;...&lt;/span&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">span</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">span</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег SPAN&lt;/title&gt;
+  &lt;style&gt;
+    body { 
+     font-family: Arial, sans-serif; /* Рубленый шрифт */ 
+    }
+    .letter { 
+     color: red; /* Красный цвет символов */ 
+     font-size: 200%; /* Размер шрифта в процентах */ 
+     font-family: serif; /* Шрифт с засечками */ 
+     position: relative; /* Относительное позиционирование */ 
+     top: 5px; /* Сдвиг сверху */ 
+    }
+  &lt;/style&gt; 
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;p&gt;&lt;span class="letter"&gt;Р&lt;/span&gt;азумные люди приспосабливаются к окружающему миру. 
+  Неразумные люди приспосабливают мир к себе. Вот почему прогресс определяется 
+  действиями неразумных людей.&lt;/p&gt; 
+  &lt;p&gt;Бернард Шоу&lt;/p&gt;
+ 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег SPAN<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">style</span>&gt;</span><span class="css">
+    <span class="keyword">body</span> <span class="rules">{ 
+     <span class="rule"><span class="keyword">font-family</span>:<span class="value"> Arial, sans-serif</span>;</span> <span class="comment">/* Рубленый шрифт */</span> 
+    }</span>
+    <span class="class">.letter</span> <span class="rules">{ 
+     <span class="rule"><span class="keyword">color</span>:<span class="value"> red</span>;</span> <span class="comment">/* Красный цвет символов */</span> 
+     <span class="rule"><span class="keyword">font-size</span>:<span class="value"> <span class="number">200</span>%</span>;</span> <span class="comment">/* Размер шрифта в процентах */</span> 
+     <span class="rule"><span class="keyword">font-family</span>:<span class="value"> serif</span>;</span> <span class="comment">/* Шрифт с засечками */</span> 
+     <span class="rule"><span class="keyword">position</span>:<span class="value"> relative</span>;</span> <span class="comment">/* Относительное позиционирование */</span> 
+     <span class="rule"><span class="keyword">top</span>:<span class="value"> <span class="number">5</span>px</span>;</span> <span class="comment">/* Сдвиг сверху */</span> 
+    }</span>
+  </span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span> 
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">span</span><span class="attribute"> class=<span class="value">"letter"</span></span>&gt;</span>Р<span class="tag">&lt;/<span class="keyword">span</span>&gt;</span>азумные люди приспосабливаются к окружающему миру. 
+  Неразумные люди приспосабливают мир к себе. Вот почему прогресс определяется 
+  действиями неразумных людей.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span> 
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Бернард Шоу<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+ 
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/span.png"></section>
+		</article>
+	</div>
+	<footer>
+		<div class="copyright">© 2023 Гатауллина Селина</div>
+		<div>
+			<a href="https://vk.com/school7birsk" target="_blank">МБОУ СОШ №7</a>
+		</div>
+	</footer>
+</body>
+</html>

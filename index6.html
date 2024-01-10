@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon"  href="img/2.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<title>HTML-textbook</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<iframe src="header.html" class="header-frame"></iframe>
+	<div class="page">
+		<div class="sidebar">
+		<iframe src="menu.html#index6" class="iframe-sdb"></iframe>
+		</div>
+		<article class="main">
+			<section role="article"><h1><span class="text-sise">Тег &lt;table&gt;</span></h1><h3>Описание</h3><p> Элемент <span class="tag">&lt;table&gt;</span> служит контейнером для элементов, 
+    определяющих содержимое таблицы. Любая таблица состоит из строк и ячеек, которые 
+    задаются с помощью тегов <span class="tag">&lt;tr&gt;</span> и <span class="tag">&lt;td&gt;</span>. 
+    Внутри <span class="tag">&lt;table&gt;</span> допустимо использовать следующие элементы: <span class="tag">&lt;caption&gt;</span>, <span class="tag">&lt;col&gt;</span>, <span class="tag">&lt;colgroup&gt;</span>, <span class="tag">&lt;tbody&gt;</span>, <span class="tag">&lt;td&gt;</span>, <span class="tag">&lt;tfoot&gt;</span>, <span class="tag">&lt;th&gt;</span>, <span class="tag">&lt;thead&gt;</span> и <span class="tag">&lt;tr&gt;</span>.</p><p>Таблицы с невидимой границей долгое время использовались для верстки веб-страниц, 
+    позволяя разделять документ на модульные блоки. Подобный способ применения таблиц 
+    нашел воплощение на многих сайтах, пока ему на смену не пришел более современный 
+    способ верстки с помощью слоев.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Таблица размеров обуви&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table border="1"&gt;
+   &lt;caption&gt;Таблица размеров обуви&lt;/caption&gt;
+   &lt;tr&gt;
+    &lt;th&gt;Россия&lt;/th&gt;
+    &lt;th&gt;Великобритания&lt;/th&gt;
+    &lt;th&gt;Европа&lt;/th&gt;
+    &lt;th&gt;Длина ступни, см&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;34,5&lt;/td&gt;&lt;td&gt;3,5&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;&lt;td&gt;23&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;35,5&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;36⅔&lt;/td&gt;&lt;td&gt;23–23,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;36&lt;/td&gt;&lt;td&gt;4,5&lt;/td&gt;&lt;td&gt;37⅓&lt;/td&gt;&lt;td&gt;23,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;36,5&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;38&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;37&lt;/td&gt;&lt;td&gt;5,5&lt;/td&gt;&lt;td&gt;38⅔&lt;/td&gt;&lt;td&gt;24,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;38&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;39⅓&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;38,5&lt;/td&gt;&lt;td&gt;6,5&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;25,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;39&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;40⅔&lt;/td&gt;&lt;td&gt;25,5–26&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;7,5&lt;/td&gt;&lt;td&gt;41⅓&lt;/td&gt;&lt;td&gt;26&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;40,5&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;42&lt;/td&gt;&lt;td&gt;26,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;41&lt;/td&gt;&lt;td&gt;8,5&lt;/td&gt;&lt;td&gt;42⅔&lt;/td&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;42&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;43⅓&lt;/td&gt;&lt;td&gt;27,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;43&lt;/td&gt;&lt;td&gt;9,5&lt;/td&gt;&lt;td&gt;44&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;43,5&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;44⅔&lt;/td&gt;&lt;td&gt;28–28,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;44&lt;/td&gt;&lt;td&gt;10,5&lt;/td&gt;&lt;td&gt;45⅓&lt;/td&gt;&lt;td&gt;28,5–29&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;44,5&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;46&lt;/td&gt;&lt;td&gt;29&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;45&lt;/td&gt;&lt;td&gt;11,5&lt;/td&gt;&lt;td&gt;46⅔&lt;/td&gt;&lt;td&gt;29,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;46&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;47⅓&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;46,5&lt;/td&gt;&lt;td&gt;12,5&lt;/td&gt;&lt;td&gt;48&lt;/td&gt;&lt;td&gt;30,5&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;47&lt;/td&gt;&lt;td&gt;13&lt;/td&gt;&lt;td&gt;48⅔&lt;/td&gt;&lt;td&gt;31&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td&gt;48&lt;/td&gt;&lt;td&gt;13,5&lt;/td&gt;&lt;td&gt;49⅓&lt;/td&gt;&lt;td&gt;31,5&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Таблица размеров обуви<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> border=<span class="value">"1"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">caption</span>&gt;</span>Таблица размеров обуви<span class="tag">&lt;/<span class="keyword">caption</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Россия<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Великобритания<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Европа<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Длина ступни, см<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>34,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>3,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>36<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>23<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>35,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>4<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>36⅔<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>23–23,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>36<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>4,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>37⅓<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>23,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>36,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>38<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>24<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>37<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>38⅔<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>24,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>38<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>6<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>39⅓<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>25<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>38,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>6,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>40<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>25,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>39<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>7<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>40⅔<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>25,5–26<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>40<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>7,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>41⅓<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>26<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>40,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>8<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>42<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>26,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>41<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>8,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>42⅔<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>27<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>42<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>9<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>43⅓<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>27,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>43<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>9,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>44<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>28<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>43,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>10<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>44⅔<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>28–28,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>44<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>10,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>45⅓<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>28,5–29<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>44,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>11<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>46<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>29<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>45<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>11,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>46⅔<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>29,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>46<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>12<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>47⅓<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>30<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>46,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>12,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>48<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>30,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>47<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>13<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>48⅔<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>31<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>48<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>13,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>49⅓<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>31,5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div>
+  <table border="1" style="margin-top: 15px;">
+   <caption>Таблица размеров обуви</caption>
+   <tr>
+    <th>Россия</th>
+    <th>Великобритания</th>
+    <th>Европа</th>
+    <th>Длина ступни, см</th>
+   </tr>
+   <tr><td>34,5</td><td>3,5</td><td>36</td><td>23</td></tr>
+   <tr><td>35,5</td><td>4</td><td>36⅔</td><td>23–23,5</td></tr>
+   <tr><td>36</td><td>4,5</td><td>37⅓</td><td>23,5</td></tr>
+   <tr><td>36,5</td><td>5</td><td>38</td><td>24</td></tr>
+   <tr><td>37</td><td>5,5</td><td>38⅔</td><td>24,5</td></tr>
+   <tr><td>38</td><td>6</td><td>39⅓</td><td>25</td></tr>
+   <tr><td>38,5</td><td>6,5</td><td>40</td><td>25,5</td></tr>
+   <tr><td>39</td><td>7</td><td>40⅔</td><td>25,5–26</td></tr>
+   <tr><td>40</td><td>7,5</td><td>41⅓</td><td>26</td></tr>
+   <tr><td>40,5</td><td>8</td><td>42</td><td>26,5</td></tr>
+   <tr><td>41</td><td>8,5</td><td>42⅔</td><td>27</td></tr>
+   <tr><td>42</td><td>9</td><td>43⅓</td><td>27,5</td></tr>
+   <tr><td>43</td><td>9,5</td><td>44</td><td>28</td></tr>
+   <tr><td>43,5</td><td>10</td><td>44⅔</td><td>28–28,5</td></tr>
+   <tr><td>44</td><td>10,5</td><td>45⅓</td><td>28,5–29</td></tr>
+   <tr><td>44,5</td><td>11</td><td>46</td><td>29</td></tr>
+   <tr><td>45</td><td>11,5</td><td>46⅔</td><td>29,5</td></tr>
+   <tr><td>46</td><td>12</td><td>47⅓</td><td>30</td></tr>
+   <tr><td>46,5</td><td>12,5</td><td>48</td><td>30,5</td></tr>
+   <tr><td>47</td><td>13</td><td>48⅔</td><td>31</td></tr>
+   <tr><td>48</td><td>13,5</td><td>49⅓</td><td>31,5</td></tr>
+  </table></section>
+  <section role="article"><h1><span class="text-sise">Тег &lt;caption&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;caption&gt;</span> предназначен для создания заголовка 
+    к таблице и может размещаться только внутри контейнера <span class="tag">&lt;table&gt;</span>, 
+    причем сразу после открывающего тега. Такой заголовок представляет собой текст, 
+    по умолчанию отображаемый перед таблицей и описывающий ее содержание. </p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+ &lt;caption&gt;Текст&lt;/caption&gt;
+ &lt;tr&gt;
+  &lt;td&gt;...&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">caption</span>&gt;</span>Текст<span class="tag">&lt;/<span class="keyword">caption</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег CAPTION&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;  
+  &lt;table width="100%" border="1" cellspacing="0" cellpadding="4"&gt;
+   &lt;caption&gt;Таблица 3.2. Демонстрация катаболических 
+     процессов организма&lt;/caption&gt;  
+   &lt;tr&gt; 
+    &lt;th&gt;&amp;nbsp;&lt;/th&gt;&lt;th&gt;Чебурашка&lt;/th&gt;
+    &lt;th&gt;Крокодил Гена&lt;/th&gt;&lt;th&gt;Шапокляк&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;Съел, кг&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;Выпил, л&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;Смог, раз&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;5&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег CAPTION<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>  
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> width=<span class="value">"100%"</span></span><span class="attribute"> border=<span class="value">"1"</span></span><span class="attribute"> cellspacing=<span class="value">"0"</span></span><span class="attribute"> cellpadding=<span class="value">"4"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">caption</span>&gt;</span>Таблица 3.2. Демонстрация катаболических 
+     процессов организма<span class="tag">&lt;/<span class="keyword">caption</span>&gt;</span>  
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span> 
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>&amp;nbsp;<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span><span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Чебурашка<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Крокодил Гена<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span><span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Шапокляк<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span> 
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Съел, кг<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span> 
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Выпил, л<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>6<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>8<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span> 
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Смог, раз<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/caption.png"></section>
+  <section role="article"><h1><span class="text-sise">Тег &lt;thead&gt;</span></h1><h3>Описание</h3><p> Элемент <span class="tag">&lt;thead&gt;</span> предназначен для хранения одной 
+    или нескольких строк, которые представлены вверху таблицы. Допустимо использовать 
+    не более одного элемента <span class="tag">&lt;thead&gt;</span> в пределах одной 
+    таблицы, и он должен идти в исходном коде сразу после тега <span class="tag">&lt;table&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;td&gt; ... &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tfoot&gt; ... &lt;/tfoot&gt;
+ &lt;tbody&gt; ...&nbsp;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">thead</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">thead</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">tfoot</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">tfoot</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">tbody</span>&gt;</span> ...&nbsp;<span class="tag">&lt;/<span class="keyword">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег THEAD&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;table style="width: 600px;"&gt;
+   &lt;thead style="background: #fc0"&gt;
+    &lt;tr&gt;
+     &lt;td&gt; ... &lt;/td&gt;
+     &lt;td&gt; ... &lt;/td&gt; 
+    &lt;/tr&gt; 
+   &lt;/thead&gt;
+   &lt;tbody style="background: #ccc"&gt;
+    &lt;tr&gt;
+     &lt;td&gt; ... &lt;/td&gt;
+     &lt;td&gt; ... &lt;/td&gt; 
+    &lt;/tr&gt; 
+   &lt;/tbody&gt;
+  &lt;/table&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег THEAD<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> style=<span class="value">"width: 600px;"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">thead</span><span class="attribute"> style=<span class="value">"background: #fc0"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span> 
+    <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span> 
+   <span class="tag">&lt;/<span class="keyword">thead</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tbody</span><span class="attribute"> style=<span class="value">"background: #ccc"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span> 
+    <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span> 
+   <span class="tag">&lt;/<span class="keyword">tbody</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+  <section role="article"><h1><span class="text-sise">Тег &lt;tbody&gt;</span></h1><h3>Описание</h3><p> Элемент <span class="tag">&lt;tbody&gt;</span> предназначен для хранения одной 
+    или нескольких строк таблицы. Это позволяет создавать структурные блоки, к которым 
+    можно применять единое оформление через стили, а также управлять их видом через 
+    скрипты.</p><p> Допускается применять несколько тегов <span class="tag">&lt;tbody&gt;</span> внутри контейнера <span class="tag">&lt;table&gt;</span>. Доступны и другие 
+    виды группировок строк&nbsp;— <span class="tag">&lt;tfoot&gt;</span> и <span class="tag">&lt;thead&gt;</span>, 
+    ни один из них не должен перекрываться с элементом <span class="tag">&lt;tbody&gt;</span>. </p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+ &lt;thead&gt; .... &lt;/thead&gt;
+ &lt;tfoot&gt; ... &lt;/tfoot&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td&gt; ... &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">thead</span>&gt;</span> .... <span class="tag">&lt;/<span class="keyword">thead</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">tfoot</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">tfoot</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">tbody</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  &lt;title&gt;Тег TBODY&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;table width="600" border="1"&gt;
+   &lt;tbody align="right"&gt;
+    &lt;tr&gt;
+     &lt;td&gt;Ячейка 1&lt;/td&gt;
+     &lt;td&gt;Ячейка 2&lt;/td&gt; 
+    &lt;/tr&gt; 
+   &lt;/tbody&gt;
+  &lt;/table&gt; 
+
+ &lt;/body&gt;
+ &lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> http-equiv=<span class="value">"Content-Type"</span></span><span class="attribute"> content=<span class="value">"text/html; charset=utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег TBODY<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> width=<span class="value">"600"</span></span><span class="attribute"> border=<span class="value">"1"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tbody</span><span class="attribute"> align=<span class="value">"right"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Ячейка 1<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Ячейка 2<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span> 
+    <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span> 
+   <span class="tag">&lt;/<span class="keyword">tbody</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span> 
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+ <section role="article"><h1><span class="text-sise">Тег &lt;th&gt;</span></h1><h3>Описание</h3><p>Тег <span class="tag">&lt;th&gt;</span> предназначен для создания одной ячейки 
+    таблицы, которая обозначается как заголовочная. Текст в такой ячейке отображается 
+    браузером обычно жирным шрифтом и выравнивается по центру. Тег <span class="tag">&lt;th&gt;</span> должен размещаться внутри контейнера <span class="tag">&lt;tr&gt;</span>, который 
+    в свою очередь располагается внутри тега <span class="tag">&lt;table&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;...&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  &lt;title&gt;Тег TH&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+    table {
+     border-collapse: collapse; /* Отображать двойные линии как одинарные */
+    }
+    th {
+     background: #ccc; /* Цвет фона */
+     text-align: left; /* Выравнивание по левому краю */
+    }
+    td, th {
+     border: 1px solid #800; /* Параметры границы */
+     padding: 4px; /* Поля в ячейках */
+    } 
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;table width="100%" cellspacing="0" border="1"&gt;
+   &lt;tr&gt;
+    &lt;th&gt;Браузер&lt;/th&gt;
+    &lt;th colspan="3"&gt;Internet Explorer&lt;/th&gt;
+    &lt;th colspan="3"&gt;Opera&lt;/th&gt;
+    &lt;th colspan="2"&gt;Firefox&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;th&gt;Версия&lt;/th&gt;
+    &lt;td&gt;5.5&lt;/td&gt;
+    &lt;td&gt;6.0&lt;/td&gt; 
+    &lt;td&gt;7.0&lt;/td&gt;
+    &lt;td&gt;7.0&lt;/td&gt;
+    &lt;td&gt;8.0&lt;/td&gt;
+    &lt;td&gt;9.0&lt;/td&gt;
+    &lt;td&gt;1.0&lt;/td&gt;
+    &lt;td&gt;2.0&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;th&gt;Поддерживается&lt;/th&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+    &lt;td&gt;Да&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> http-equiv=<span class="value">"Content-Type"</span></span><span class="attribute"> content=<span class="value">"text/html; charset=utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег TH<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">style</span><span class="attribute"> type=<span class="value">"text/css"</span></span>&gt;</span><span class="css">
+    <span class="keyword">table</span> <span class="rules">{
+     <span class="rule"><span class="keyword">border-collapse</span>:<span class="value"> collapse</span>;</span> <span class="comment">/* Отображать двойные линии как одинарные */</span>
+    }</span>
+    <span class="keyword">th</span> <span class="rules">{
+     <span class="rule"><span class="keyword">background</span>:<span class="value"> <span class="hexcolor">#ccc</span></span>;</span> <span class="comment">/* Цвет фона */</span>
+     <span class="rule"><span class="keyword">text-align</span>:<span class="value"> left</span>;</span> <span class="comment">/* Выравнивание по левому краю */</span>
+    }</span>
+    <span class="keyword">td</span>, <span class="keyword">th</span> <span class="rules">{
+     <span class="rule"><span class="keyword">border</span>:<span class="value"> <span class="number">1</span>px solid <span class="hexcolor">#800</span></span>;</span> <span class="comment">/* Параметры границы */</span>
+     <span class="rule"><span class="keyword">padding</span>:<span class="value"> <span class="number">4</span>px</span>;</span> <span class="comment">/* Поля в ячейках */</span>
+    }</span> 
+  </span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> width=<span class="value">"100%"</span></span><span class="attribute"> cellspacing=<span class="value">"0"</span></span><span class="attribute"> border=<span class="value">"1"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Браузер<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span><span class="attribute"> colspan=<span class="value">"3"</span></span>&gt;</span>Internet Explorer<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span><span class="attribute"> colspan=<span class="value">"3"</span></span>&gt;</span>Opera<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span><span class="attribute"> colspan=<span class="value">"2"</span></span>&gt;</span>Firefox<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Версия<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5.5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>6.0<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span> 
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>7.0<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>7.0<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>8.0<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>9.0<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1.0<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2.0<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">th</span>&gt;</span>Поддерживается<span class="tag">&lt;/<span class="keyword">th</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Да<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/th.png"></section>
+  <section role="article"><h1><span class="text-sise">Тег &lt;tr&gt;</span></h1><h3>Описание </h3><p> Тег <span class="tag">&lt;tr&gt;</span> служит контейнером для создания строки 
+    таблицы. Каждая ячейка в пределах такой строки может задаваться с помощью тега 
+     <span class="tag">&lt;th&gt;</span> или <span class="tag">&lt;td&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;tr&gt;
+   &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  &lt;title&gt;Тег TR&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;table width="100%" border="0" cellpadding="4"&gt;
+   &lt;tr align="right" valign="top"&gt;
+    &lt;td&gt;&lt;img src="images/book.png" width="199" height="133" alt="Книга"&gt;&lt;/td&gt;
+    &lt;td&gt;Lorem ipsum dolor sit amet...&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> http-equiv=<span class="value">"Content-Type"</span></span><span class="attribute"> content=<span class="value">"text/html; charset=utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег TR<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> width=<span class="value">"100%"</span></span><span class="attribute"> border=<span class="value">"0"</span></span><span class="attribute"> cellpadding=<span class="value">"4"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span><span class="attribute"> align=<span class="value">"right"</span></span><span class="attribute"> valign=<span class="value">"top"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">img</span><span class="attribute"> src=<span class="value">"images/book.png"</span></span><span class="attribute"> width=<span class="value">"199"</span></span><span class="attribute"> height=<span class="value">"133"</span></span><span class="attribute"> alt=<span class="value">"Книга"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+  <section role="article"><h1><span class="text-sise">Тег &lt;td&gt;</span></h1><h3>Описание</h3><p> Предназначен для создания одной ячейки таблицы. Тег <span class="tag">&lt;td&gt;</span> должен размещаться внутри контейнера <span class="tag">&lt;tr&gt;</span>, который 
+    в свою очередь располагается внутри тега <span class="tag">&lt;table&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+  "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  &lt;title&gt;Тег TD&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;table border="1" cellpadding="7" cellspacing="0"&gt;
+   &lt;tr&gt;
+   &nbsp;&nbsp;&lt;td colspan="2" bgcolor="#D3EDF6" align="center"&gt;Ячейка 1&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &nbsp;&nbsp;&lt;td valign="top" align="center"&gt;Ячейка 2&lt;/td&gt;
+   &nbsp;&nbsp;&lt;td width="98%" valign="top"&gt;Ячейка 3&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt; 
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+  "http://www.w3.org/TR/html4/loose.dtd"&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> http-equiv=<span class="value">"Content-Type"</span></span><span class="attribute"> content=<span class="value">"text/html; charset=utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег TD<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> border=<span class="value">"1"</span></span><span class="attribute"> cellpadding=<span class="value">"7"</span></span><span class="attribute"> cellspacing=<span class="value">"0"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   &nbsp;&nbsp;<span class="tag">&lt;<span class="keyword">td</span><span class="attribute"> colspan=<span class="value">"2"</span></span><span class="attribute"> bgcolor=<span class="value">"#D3EDF6"</span></span><span class="attribute"> align=<span class="value">"center"</span></span>&gt;</span>Ячейка 1<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   &nbsp;&nbsp;<span class="tag">&lt;<span class="keyword">td</span><span class="attribute"> valign=<span class="value">"top"</span></span><span class="attribute"> align=<span class="value">"center"</span></span>&gt;</span>Ячейка 2<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   &nbsp;&nbsp;<span class="tag">&lt;<span class="keyword">td</span><span class="attribute"> width=<span class="value">"98%"</span></span><span class="attribute"> valign=<span class="value">"top"</span></span>&gt;</span>Ячейка 3<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span> 
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+<section role="article"><h1><span class="text-sise">Тег &lt;tfoot&gt;</span></h1><h3>Описание</h3><p> Элемент <span class="tag">&lt;tfoot&gt;</span> предназначен для хранения одной 
+    или нескольких строк, которые представлены внизу таблицы. Хотя тег <span class="tag">&lt;tfoot&gt;</span> в исходном коде должен быть определен до тега <span class="tag">&lt;tbody&gt;</span>, 
+    браузеры отображают его в самом низу таблицы. </p><p>В пределах таблицы разрешается использовать только один элемент <span class="tag">&lt;tfoot&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+ &lt;thead&gt; ... &lt;/thead&gt;
+ &lt;tfoot&gt;
+  &lt;tr&gt;
+   &lt;td&gt; ... &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tfoot&gt;
+ &lt;tbody&gt; ...&nbsp;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">thead</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">thead</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">tfoot</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span> ... <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">tfoot</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">tbody</span>&gt;</span> ...&nbsp;<span class="tag">&lt;/<span class="keyword">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  &lt;title&gt;Тег TFOOT&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;table width="600"&gt;
+   &lt;tfoot align="center" style="background: #ffc"&gt;
+    &lt;tr&gt;
+     &lt;td&gt;Ячейка 1, расположенная в TFOOT&lt;/td&gt;
+     &lt;td&gt;Ячейка 2, расположенная в TFOOT&lt;/td&gt; 
+    &lt;/tr&gt; 
+   &lt;/tfoot&gt;
+
+   &lt;tbody align="right" style="background: silver"&gt;
+    &lt;tr&gt;
+     &lt;td&gt;Ячейка 3, расположенная в TBODY&lt;/td&gt;
+     &lt;td&gt;Ячейка 4, расположенная в TBODY&lt;/td&gt; 
+    &lt;/tr&gt; 
+   &lt;/tbody&gt;
+  &lt;/table&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> http-equiv=<span class="value">"Content-Type"</span></span><span class="attribute"> content=<span class="value">"text/html; charset=utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег TFOOT<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> width=<span class="value">"600"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tfoot</span><span class="attribute"> align=<span class="value">"center"</span></span><span class="attribute"> style=<span class="value">"background: #ffc"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Ячейка 1, расположенная в TFOOT<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Ячейка 2, расположенная в TFOOT<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span> 
+    <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span> 
+   <span class="tag">&lt;/<span class="keyword">tfoot</span>&gt;</span>
+
+   <span class="tag">&lt;<span class="keyword">tbody</span><span class="attribute"> align=<span class="value">"right"</span></span><span class="attribute"> style=<span class="value">"background: silver"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Ячейка 3, расположенная в TBODY<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Ячейка 4, расположенная в TBODY<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span> 
+    <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span> 
+   <span class="tag">&lt;/<span class="keyword">tbody</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+<section role="article"><h1><span class="text-sise">Тег &lt;col&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;col&gt;</span> задает ширину и другие характеристики одной 
+    или нескольких колонок таблицы. При наличии этого тега браузер начинает показывать 
+    содержимое таблицы, не дожидаясь ее полной загрузки. Тег <span class="tag">&lt;col&gt;</span> можно использовать совместно с тегом <span class="tag">&lt;colgroup&gt;</span>, 
+    который задает группу колонок, обладающих общими характеристиками.</p><h3>Синтаксис</h3><table class="syntax"><tbody><tr><td class="html">HTML</td><td><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;col атрибуты&gt;
+  &lt;tr&gt;
+   &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">col</span> атрибуты&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre></td></tr><tr><td class="xhtml">XHTML</td><td><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;col атрибуты /&gt;
+  &lt;tr&gt;
+   &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">col</span> атрибуты /&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre></td></tr></tbody></table><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег COL&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;table width="400" border="0" cellpadding="5" cellspacing="0"&gt;
+   &lt;col width="150" valign="top"&gt;
+   &lt;col width="250" valign="top"&gt;
+   &lt;tr&gt;
+    &lt;td style="background: #B0B28E"&gt;Lorem ipsum dolor sit amet, consectetuer 
+     adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet 
+     dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis 
+     nostrud exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+     ea commodo consequat.
+    &lt;/td&gt;
+    &lt;td style="background: #CCCCCC"&gt;Lorem ipsum dolor sit amet, consectetuer 
+     adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet 
+     dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis 
+     nostrud exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+     ea commodo consequat. 
+    &lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег COL<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> width=<span class="value">"400"</span></span><span class="attribute"> border=<span class="value">"0"</span></span><span class="attribute"> cellpadding=<span class="value">"5"</span></span><span class="attribute"> cellspacing=<span class="value">"0"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">col</span><span class="attribute"> width=<span class="value">"150"</span></span><span class="attribute"> valign=<span class="value">"top"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">col</span><span class="attribute"> width=<span class="value">"250"</span></span><span class="attribute"> valign=<span class="value">"top"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span><span class="attribute"> style=<span class="value">"background: #B0B28E"</span></span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer 
+     adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet 
+     dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis 
+     nostrud exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+     ea commodo consequat.
+    <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">td</span><span class="attribute"> style=<span class="value">"background: #CCCCCC"</span></span>&gt;</span>Lorem ipsum dolor sit amet, consectetuer 
+     adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet 
+     dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis 
+     nostrud exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+     ea commodo consequat. 
+    <span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/col.png"></section>
+<section role="article"><h1><span class="text-sise">Тег &lt;colgroup&gt;</span></h1><h3>Описание </h3><p> Тег <span class="tag">&lt;colgroup&gt;</span> предназначен для задания ширины 
+    и стиля одной или нескольких колонок таблицы. Этот тег позволяет уменьшить код 
+    таблицы за счет сокращения повторяющихся атрибутов, и при наличии этого тега 
+    браузер начинает показывать содержимое таблицы, не дожидаясь ее полной загрузки. 
+    Тег <span class="tag">&lt;colgroup&gt; </span>можно использовать в комбинации 
+    с тегом <span class="tag">&lt;col&gt;</span>, который определяет характеристики 
+    одной или нескольких колонок.</p><p> Обычно закрывающий тег не требуется, но если <span class="tag">&lt;colgroup&gt;</span> выступает как контейнер для элементов <span class="tag">&lt;col&gt;</span>, 
+    тогда следует добавить тег <span class="tag">&lt;/colgroup&gt;</span> в конце 
+    группы. </p><p>Разница между свойствами тегов <span class="tag">&lt;colgroup&gt; </span>и 
+    <span class="tag">&lt;col&gt;</span> не очень велика и состоит в следующем. <span class="tag">&lt;colgroup&gt; </span>позволяет объединять колонки в определенные 
+    группы, также при добавлении атрибута <span class="attribute">rules="groups"</span> к тегу <span class="tag">&lt;table&gt;</span> браузер будет рисовать линию только 
+    между колонками, созданными с помощью <span class="tag">&lt;colgroup&gt;</span>. 
+    В остальных случаях поведение колонок назначенных через элементы <span class="tag">&lt;colgroup&gt;</span> и <span class="tag">&lt;col&gt;</span> идентично.</p><h3>Синтаксис</h3><table class="syntax"><tbody><tr><td class="html">HTML</td><td><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;colgroup атрибуты&gt;
+  &lt;tr&gt;
+   &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">colgroup</span> атрибуты&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre></td></tr><tr><td class="xhtml">XHTML</td><td><pre style="display: none;"><code class="no-buttons">&lt;table&gt;
+  &lt;colgroup атрибуты /&gt;
+  &lt;tr&gt;
+   &lt;td&gt;...&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">table</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">colgroup</span> атрибуты /&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">table</span>&gt;</span></code></pre></td></tr></tbody></table><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег COLGROUP&lt;/title&gt;
+ &lt;/head&gt;
+&lt;body&gt; 
+
+ &lt;table width="450" cellpadding="2" cellspacing="0" border="1" rules="groups"&gt;
+  &lt;colgroup width="150"&gt;
+  &lt;colgroup span="9" align="center" width="50"&gt;
+   &lt;col span="5"&gt;
+   &lt;col span="4"&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt; 
+   &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;1995&lt;/td&gt;&lt;td&gt;1996&lt;/td&gt;&lt;td&gt;1997&lt;/td&gt;
+   &lt;td&gt;1998&lt;/td&gt;&lt;td&gt;1999&lt;/td&gt;&lt;td&gt;2000&lt;/td&gt;&lt;td&gt;2001&lt;/td&gt;
+   &lt;td&gt;2002&lt;/td&gt;&lt;td&gt;2003&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+   &lt;td&gt;Нефть&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;
+   &lt;td&gt;3&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;74&lt;/td&gt;&lt;td&gt;57&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Золото&lt;/td&gt;&lt;td&gt;3&lt;/td&gt; &lt;td&gt;6&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;
+   &lt;td&gt;4&lt;/td&gt;&lt;td&gt;69&lt;/td&gt;&lt;td&gt;72&lt;/td&gt;&lt;td&gt;56&lt;/td&gt;&lt;td&gt;47&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Дерево&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;
+   &lt;td&gt;7&lt;/td&gt;&lt;td&gt;73&lt;/td&gt;&lt;td&gt;79&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/table&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег COLGROUP<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+<span class="tag">&lt;<span class="keyword">body</span>&gt;</span> 
+
+ <span class="tag">&lt;<span class="keyword">table</span><span class="attribute"> width=<span class="value">"450"</span></span><span class="attribute"> cellpadding=<span class="value">"2"</span></span><span class="attribute"> cellspacing=<span class="value">"0"</span></span><span class="attribute"> border=<span class="value">"1"</span></span><span class="attribute"> rules=<span class="value">"groups"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">colgroup</span><span class="attribute"> width=<span class="value">"150"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">colgroup</span><span class="attribute"> span=<span class="value">"9"</span></span><span class="attribute"> align=<span class="value">"center"</span></span><span class="attribute"> width=<span class="value">"50"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">col</span><span class="attribute"> span=<span class="value">"5"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">col</span><span class="attribute"> span=<span class="value">"4"</span></span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">colgroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span> 
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>&amp;nbsp;<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1995<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1996<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1997<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1998<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>1999<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2000<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2001<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2002<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2003<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span> 
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Нефть<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>7<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>2<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>8<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>3<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>34<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>62<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>74<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>57<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Золото<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>3<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span> <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>6<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>4<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>6<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>4<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>69<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>72<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>56<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>47<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">tr</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>Дерево<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>5<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>8<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>3<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>4<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">td</span>&gt;</span>7<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>73<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>79<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>34<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span><span class="tag">&lt;<span class="keyword">td</span>&gt;</span>86<span class="tag">&lt;/<span class="keyword">td</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">tr</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">table</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/colgroup.png"></section>
+		</article>
+	</div>
+	<footer>
+		<div class="copyright">© 2023 Гатауллина Селина</div>
+		<div>
+			<a href="https://vk.com/school7birsk" target="_blank">МБОУ СОШ №7</a>
+		</div>
+	</footer>
+</body>
+</html>

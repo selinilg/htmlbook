@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon"  href="img/2.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<title>HTML-textbook</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<iframe src="header.html" class="header-frame"></iframe>
+	<div class="page">
+		<div class="sidebar">
+		<iframe src="menu.html#index3" class="iframe-sdb"></iframe>
+		</div>
+		<article class="main">
+			<section role="article"><h1><span class="text-sise">Тег &lt;form&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;form&gt;</span> устанавливает форму на веб-странице. 
+    Форма предназначена для обмена данными между пользователем и сервером. Область 
+    применения форм не ограничена отправкой данных на сервер, с помощью клиентских 
+    скриптов можно получить доступ к любому элементу формы, изменять его и применять 
+  по своему усмотрению. </p><p>Документ может содержать любое количество форм, но одновременно на сервер может 
+    быть отправлена только одна форма. По этой причине данные форм должны быть независимы 
+    друг от друга.</p><p>Для отправки формы на сервер используется кнопка Submit, того же можно 
+    добиться, если нажать клавишу <span class="button">Enter</span> в пределах формы. Если кнопка Submit 
+    отсутствует в форме, клавиша <span class="button">Enter</span> имитирует ее использование.</p><p>Когда форма отправляется на сервер, управление данными передается программе, 
+    заданной атрибутом <span class="attribute">action</span> тега <span class="tag">&lt;form&gt;</span>. 
+    Предварительно браузер подготавливает информацию в виде пары «имя=значение», 
+    где имя определяется атрибутом <span class="attribute">name</span> тега <span class="tag">&lt;input&gt;</span>, 
+    а значение введено пользователем или установлено в поле формы по умолчанию. 
+    Если для отправки данных используется метод <span class="value">GET</span>, 
+    то адресная строка может принимать следующий вид.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;form action="URL"&gt;
+  ...
+&lt;/form&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">form</span><span class="attribute"> action=<span class="value">"URL"</span></span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="keyword">form</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег FORM&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+ &lt;form action="handler.php"&gt;
+  &lt;p&gt;&lt;b&gt;Как по вашему мнению расшифровывается аббревиатура &amp;quot;ОС&amp;quot;?&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="radio" name="answer" value="a1"&gt;Офицерский состав&lt;Br&gt;
+  &lt;input type="radio" name="answer" value="a2"&gt;Операционная система&lt;Br&gt;
+  &lt;input type="radio" name="answer" value="a3"&gt;Большой полосатый мух&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit"&gt;&lt;/p&gt;
+ &lt;/form&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег FORM<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+ <span class="tag">&lt;<span class="keyword">form</span><span class="attribute"> action=<span class="value">"handler.php"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">b</span>&gt;</span>Как по вашему мнению расшифровывается аббревиатура &amp;quot;ОС&amp;quot;?<span class="tag">&lt;/<span class="keyword">b</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"radio"</span></span><span class="attribute"> name=<span class="value">"answer"</span></span><span class="attribute"> value=<span class="value">"a1"</span></span>&gt;</span>Офицерский состав<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"radio"</span></span><span class="attribute"> name=<span class="value">"answer"</span></span><span class="attribute"> value=<span class="value">"a2"</span></span>&gt;</span>Операционная система<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"radio"</span></span><span class="attribute"> name=<span class="value">"answer"</span></span><span class="attribute"> value=<span class="value">"a3"</span></span>&gt;</span>Большой полосатый мух<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"submit"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">form</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/form.png"></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;fieldset&gt;</span></h1><h3>Описание</h3><p> Элемент <span class="tag">&lt;fieldset&gt;</span> предназначен для группирования 
+    элементов формы. Такая группировка облегчает работу с формами, содержащими большое 
+    число данных. Например, один блок может быть предназначен для ввода текстовой 
+    информации, а другой&nbsp;— для флажков. </p><p>Браузеры для повышения наглядности отображают результат использования тега <span class="tag">&lt;fieldset&gt;</span> в виде рамки. Ее вид зависит от операционной 
+    системы, а также используемого браузера (рис.&nbsp;1, 2). </p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;form&gt;
+  &lt;fieldset&gt;...&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">form</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">fieldset</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">fieldset</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">form</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег FIELDSET&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;  
+
+ &lt;form action="handler.php"&gt;
+  &lt;fieldset&gt;
+   &lt;legend&gt;Работа со временем&lt;/legend&gt;
+     &lt;input type="checkbox"&gt; создание пунктуальности (никогда не 
+      будете никуда опаздывать);&lt;br&gt;
+     &lt;input type="checkbox"&gt; излечение от пунктуальности (никогда 
+      никуда не будете торопиться);&lt;br&gt;
+     &lt;input type="checkbox"&gt; изменение восприятия времени и часов.
+      &lt;p&gt;&lt;input type="submit"&gt;&lt;/p&gt;
+  &lt;/fieldset&gt;
+ &lt;/form&gt; 
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег FIELDSET<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>  
+
+ <span class="tag">&lt;<span class="keyword">form</span><span class="attribute"> action=<span class="value">"handler.php"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">fieldset</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">legend</span>&gt;</span>Работа со временем<span class="tag">&lt;/<span class="keyword">legend</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span>&gt;</span> создание пунктуальности (никогда не 
+      будете никуда опаздывать);<span class="tag">&lt;<span class="keyword">br</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span>&gt;</span> излечение от пунктуальности (никогда 
+      никуда не будете торопиться);<span class="tag">&lt;<span class="keyword">br</span>&gt;</span>
+     <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span>&gt;</span> изменение восприятия времени и часов.
+      <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"submit"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">fieldset</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">form</span>&gt;</span> 
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/fieldset.png"></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;legend&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;legend&gt;</span> применяется для создания заголовка 
+    группы элементов формы, которая определяется с помощью тега <span class="tag">&lt;fieldset&gt;</span>. 
+    Группа элементов обозначается в браузере с помощью рамки, а текст, который располагается внутри 
+    контейнера <span class="tag">&lt;legend&gt;</span>, встраивается в эту рамку.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;fieldset&gt;
+  &lt;legend&gt;Текст&lt;/legend&gt;
+&lt;/fieldset&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">fieldset</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">legend</span>&gt;</span>Текст<span class="tag">&lt;/<span class="keyword">legend</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">fieldset</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег LEGEND&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;  
+
+  &lt;fieldset&gt;
+   &lt;legend&gt;Работа со временем&lt;/legend&gt;
+   &lt;p&gt;&lt;input type="checkbox"&gt; создание пунктуальности (никогда не 
+    будете никуда опаздывать);&lt;Br&gt;
+    &lt;input type="checkbox"&gt; излечение от пунктуальности (никогда 
+    никуда не будете торопиться);&lt;Br&gt;
+    &lt;input type="checkbox"&gt; изменение восприятия времени и часов.&lt;/p&gt;
+   &lt;/fieldset&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег LEGEND<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>  
+
+  <span class="tag">&lt;<span class="keyword">fieldset</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">legend</span>&gt;</span>Работа со временем<span class="tag">&lt;/<span class="keyword">legend</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span>&gt;</span> создание пунктуальности (никогда не 
+    будете никуда опаздывать);<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span>&gt;</span> излечение от пунктуальности (никогда 
+    никуда не будете торопиться);<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span>&gt;</span> изменение восприятия времени и часов.<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">fieldset</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;input&gt;</span></h1><h3>Описание </h3><p> Тег <span class="tag">&lt;input&gt;</span> является одним из разносторонних 
+    элементов формы и позволяет создавать разные элементы интерфейса и обеспечить 
+    взаимодействие с пользователем. Главным образом <span class="tag">&lt;input&gt;</span> предназначен для создания текстовых полей, различных кнопок, переключателей 
+    и флажков. Хотя элемент <span class="tag">&lt;input&gt;</span> не требуется 
+    помещать внутрь контейнера <span class="tag">&lt;form&gt;</span>, определяющего 
+    форму, но если введенные пользователем данные должны быть отправлены на сервер, 
+    где их обрабатывает серверная программа, то указывать <span class="tag">&lt;form&gt;</span> обязательно. То же самое обстоит и в случае обработки данных с помощью клиентских 
+   приложений, например, скриптов на языке JavaScript.</p><p>Основной атрибут тега <span class="tag">&lt;input&gt;</span>, определяющий 
+    вид элемента — <span class="attribute">type</span>. Он позволяет задавать 
+    следующие элементы формы: текстовое поле (<span class="value">text</span>), 
+    поле с паролем (<span class="value">password</span>), переключатель (<span class="value">radio</span>), 
+    флажок (<span class="value">checkbox</span>), скрытое поле (<span class="value">hidden</span>), 
+    кнопка (<span class="value">button</span>), кнопка для отправки формы (<span class="value">submit</span>), 
+    кнопка для очистки формы (<span class="value">reset</span>), поле для отправки 
+    файла (<span class="value">file</span>) и кнопка с изображением (<span class="value">image</span>). 
+    Для каждого элемента существует свой список атрибутов, которые определяют его 
+    вид и характеристики. Кроме того, в HTML5 добавлено еще более десятка новых элементов.</p><h3>Синтаксис</h3><table class="syntax"><tbody><tr><td class="html">HTML</td><td><pre style="display: none;"><code class="no-buttons">&lt;input атрибуты&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">input</span> атрибуты&gt;</span></code></pre></td></tr><tr><td class="xhtml">XHTML</td><td><pre style="display: none;"><code class="no-buttons">&lt;input атрибуты /&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">input</span> атрибуты /&gt;</span></code></pre></td></tr></tbody></table><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег INPUT&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+ &lt;form name="test" method="post" action="input1.php"&gt;
+  &lt;p&gt;&lt;b&gt;Ваше имя:&lt;/b&gt;&lt;br&gt;
+   &lt;input type="text" size="40"&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;b&gt;Каким браузером в основном пользуетесь:&lt;/b&gt;&lt;Br&gt;
+   &lt;input type="radio" name="browser" value="ie"&gt; Internet Explorer&lt;Br&gt;
+   &lt;input type="radio" name="browser" value="opera"&gt; Opera&lt;Br&gt;
+   &lt;input type="radio" name="browser" value="firefox"&gt; Firefox&lt;Br&gt;
+  &lt;/p&gt;
+  &lt;p&gt;Комментарий&lt;Br&gt;
+   &lt;textarea name="comment" cols="40" rows="3"&gt;&lt;/textarea&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Отправить"&gt;
+   &lt;input type="reset" value="Очистить"&gt;&lt;/p&gt;
+ &lt;/form&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег INPUT<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+ <span class="tag">&lt;<span class="keyword">form</span><span class="attribute"> name=<span class="value">"test"</span></span><span class="attribute"> method=<span class="value">"post"</span></span><span class="attribute"> action=<span class="value">"input1.php"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">b</span>&gt;</span>Ваше имя:<span class="tag">&lt;/<span class="keyword">b</span>&gt;</span><span class="tag">&lt;<span class="keyword">br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"text"</span></span><span class="attribute"> size=<span class="value">"40"</span></span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">b</span>&gt;</span>Каким браузером в основном пользуетесь:<span class="tag">&lt;/<span class="keyword">b</span>&gt;</span><span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"radio"</span></span><span class="attribute"> name=<span class="value">"browser"</span></span><span class="attribute"> value=<span class="value">"ie"</span></span>&gt;</span> Internet Explorer<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"radio"</span></span><span class="attribute"> name=<span class="value">"browser"</span></span><span class="attribute"> value=<span class="value">"opera"</span></span>&gt;</span> Opera<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"radio"</span></span><span class="attribute"> name=<span class="value">"browser"</span></span><span class="attribute"> value=<span class="value">"firefox"</span></span>&gt;</span> Firefox<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>Комментарий<span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">textarea</span><span class="attribute"> name=<span class="value">"comment"</span></span><span class="attribute"> cols=<span class="value">"40"</span></span><span class="attribute"> rows=<span class="value">"3"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">textarea</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"submit"</span></span><span class="attribute"> value=<span class="value">"Отправить"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"reset"</span></span><span class="attribute"> value=<span class="value">"Очистить"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">form</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/input.png"></section></section>	
+	<section role="article"><h1><span class="text-sise">Тег &lt;button&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;button&gt;</span> создает на веб-странице кнопки 
+    и по своему действию напоминает результат, получаемый с помощью тега <span class="tag">&lt;input&gt;</span> (с атрибутом <span class="var">type="button | reset | submit"</span>). В отличие от этого тега, <span class="tag">&lt;button&gt;</span> предлагает расширенные возможности по созданию кнопок. Например, на подобной 
+    кнопке можно размещать любые элементы HTML, в том числе изображения. Используя 
+    стили можно определить вид кнопки путем изменения шрифта, цвета фона, размеров 
+    и других параметров.</p><p> Теоретически, тег <span class="tag">&lt;button&gt;</span> должен располагаться 
+    внутри формы, устанавливаемой элементом <span class="tag">&lt;form&gt;</span>. 
+    Тем не менее, браузеры не выводят сообщение об ошибке и корректно работают с 
+    тегом <span class="tag">&lt;button&gt;</span>, если он встречается самостоятельно. Однако, 
+    если необходимо результат нажатия на кнопку отправить на сервер, помещать <span class="tag">&lt;button&gt;</span> в контейнер <span class="tag">&lt;form&gt;</span> обязательно.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;form&gt;
+  &lt;button&gt;...&lt;/button&gt;
+&lt;/form&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">form</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">button</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">form</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег BUTTON&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p style="text-align: center"&gt;&lt;button&gt;Кнопка с текстом&lt;/button&gt;
+  &lt;button&gt;&lt;img src="images/umbrella.gif" alt="Зонтик" 
+          style="vertical-align: middle"&gt; Кнопка с рисунком&lt;/button&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег BUTTON<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span><span class="attribute"> style=<span class="value">"text-align: center"</span></span>&gt;</span><span class="tag">&lt;<span class="keyword">button</span>&gt;</span>Кнопка с текстом<span class="tag">&lt;/<span class="keyword">button</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">button</span>&gt;</span><span class="tag">&lt;<span class="keyword">img</span><span class="attribute"> src=<span class="value">"images/umbrella.gif"</span></span><span class="attribute"> alt=<span class="value">"Зонтик"</span></span> 
+         <span class="attribute"> style=<span class="value">"vertical-align: middle"</span></span>&gt;</span> Кнопка с рисунком<span class="tag">&lt;/<span class="keyword">button</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><img src="img/button.png"></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;label&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;label&gt;</span> устанавливает связь между определенной 
+    меткой, в качестве которой обычно выступает текст, и элементом формы (<span class="tag">&lt;input&gt;</span>, <span class="tag">&lt;select&gt;</span>, <span class="tag">&lt;textarea&gt;</span>). 
+    Такая связь необходима, чтобы изменять значения элементов формы при нажатии 
+    курсором мыши на текст. Кроме того, с помощью <span class="tag">&lt;label&gt;</span> можно устанавливать горячие клавиши на клавиатуре и переходить на активный элемент 
+    подобно ссылкам.</p><p> Существует два способа связывания объекта и метки. Первый заключается в использовании 
+    идентификатора <span class="attribute">id</span> внутри элемента формы и указании его имени в качестве атрибута <span class="attribute">for</span> тега <span class="tag">&lt;label&gt;</span>. При втором способе элемент формы помещается внутрь контейнера <span class="tag">&lt;label&gt;</span>.</p><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;input id="идентификатор"&gt;&lt;label for="идентификатор"&gt;Текст&lt;/label&gt;
+&lt;label&gt;&lt;input type="..."&gt; Текст&lt;/label&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> id=<span class="value">"идентификатор"</span></span>&gt;</span><span class="tag">&lt;<span class="keyword">label</span><span class="attribute"> for=<span class="value">"идентификатор"</span></span>&gt;</span>Текст<span class="tag">&lt;/<span class="keyword">label</span>&gt;</span>
+<span class="tag">&lt;<span class="keyword">label</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"..."</span></span>&gt;</span> Текст<span class="tag">&lt;/<span class="keyword">label</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег LABEL&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form action="handler.php"&gt;
+   &lt;p&gt;&lt;b&gt;Lorem ipsum dolor sit amet...&lt;/b&gt;&lt;/p&gt;
+   &lt;p&gt;&lt;input type="checkbox" id="check1"&gt;&lt;label for="check1"&gt;Lorem&lt;/label&gt;&lt;Br&gt;
+   &lt;input type="checkbox" id="check2"&gt;&lt;label for="check2"&gt;Ipsum&lt;/label&gt;&lt;Br&gt;
+   &lt;input type="checkbox" id="check3"&gt;&lt;label for="check3"&gt;Dolor&lt;/label&gt;&lt;Br&gt;
+   &lt;input type="checkbox" id="check4"&gt;&lt;label for="check4"&gt;Sit amet&lt;/label&gt;&lt;/p&gt;
+  &lt;/form&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег LABEL<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">form</span><span class="attribute"> action=<span class="value">"handler.php"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">b</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="keyword">b</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span><span class="attribute"> id=<span class="value">"check1"</span></span>&gt;</span><span class="tag">&lt;<span class="keyword">label</span><span class="attribute"> for=<span class="value">"check1"</span></span>&gt;</span>Lorem<span class="tag">&lt;/<span class="keyword">label</span>&gt;</span><span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span><span class="attribute"> id=<span class="value">"check2"</span></span>&gt;</span><span class="tag">&lt;<span class="keyword">label</span><span class="attribute"> for=<span class="value">"check2"</span></span>&gt;</span>Ipsum<span class="tag">&lt;/<span class="keyword">label</span>&gt;</span><span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span><span class="attribute"> id=<span class="value">"check3"</span></span>&gt;</span><span class="tag">&lt;<span class="keyword">label</span><span class="attribute"> for=<span class="value">"check3"</span></span>&gt;</span>Dolor<span class="tag">&lt;/<span class="keyword">label</span>&gt;</span><span class="tag">&lt;<span class="keyword">Br</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"checkbox"</span></span><span class="attribute"> id=<span class="value">"check4"</span></span>&gt;</span><span class="tag">&lt;<span class="keyword">label</span><span class="attribute"> for=<span class="value">"check4"</span></span>&gt;</span>Sit amet<span class="tag">&lt;/<span class="keyword">label</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">form</span>&gt;</span> 
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;select&gt;</span></h1><h3>Описание</h3><p> Тег <span class="tag">&lt;select&gt;</span> позволяет создать элемент интерфейса 
+    в виде раскрывающегося списка, а также список с одним или множественным выбором, 
+    как показано далее. Конечный вид зависит от использования атрибута <span class="attribute">size</span> тега <span class="tag">&lt;select&gt;</span>, который устанавливает высоту списка. 
+    Ширина списка определяется самым широким текстом, указанным в теге <span class="tag">&lt;option&gt;</span>, 
+    а также может изменяться с помощью стилей. Каждый пункт создается с помощью 
+    тега <span class="tag">&lt;option&gt;</span>, который должен быть вложен в контейнер <span class="tag">&lt;select&gt;</span>. Если планируется отправлять данные 
+    списка на сервер, то требуется поместить элемент <span class="tag">&lt;select&gt;</span> внутрь формы. Это также необходимо, когда к данным списка идет обращение через 
+    скрипты. </p><table style="width: 400px; margin: auto"><tbody><tr valign="top"><td align="center"><select name="select" size="3" multiple="multiple"><option selected="selected">Чебурашка</option><option>Крокодил Гена</option><option>Шапокляк</option><option>Крыса Лариса</option></select></td><td align="center"><select name="select2"><option selected="selected">Выберите героя</option><option>Чебурашка</option><option>Крокодил Гена</option><option>Шапокляк</option><option>Крыса Лариса</option></select></td></tr><tr valign="top"></tr></tbody></table><h3>Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;select&gt;
+  &lt;option&gt;Пункт 1&lt;/option&gt;
+  &lt;option&gt;Пункт 2&lt;/option&gt;
+&lt;/select&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">select</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">option</span>&gt;</span>Пункт 1<span class="tag">&lt;/<span class="keyword">option</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">option</span>&gt;</span>Пункт 2<span class="tag">&lt;/<span class="keyword">option</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">select</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег SELECT&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;  
+ 
+  &lt;form action="select1.php" method="post"&gt;
+   &lt;p&gt;&lt;select size="3" multiple name="hero[]"&gt;
+    &lt;option disabled&gt;Выберите героя&lt;/option&gt;
+    &lt;option value="Чебурашка"&gt;Чебурашка&lt;/option&gt;
+    &lt;option selected value="Крокодил Гена"&gt;Крокодил Гена&lt;/option&gt;
+    &lt;option value="Шапокляк"&gt;Шапокляк&lt;/option&gt;
+    &lt;option value="Крыса Лариса"&gt;Крыса Лариса&lt;/option&gt;
+   &lt;/select&gt;&lt;/p&gt;
+   &lt;p&gt;&lt;input type="submit" value="Отправить"&gt;&lt;/p&gt;
+  &lt;/form&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег SELECT<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>  
+ 
+  <span class="tag">&lt;<span class="keyword">form</span><span class="attribute"> action=<span class="value">"select1.php"</span></span><span class="attribute"> method=<span class="value">"post"</span></span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">select</span><span class="attribute"> size=<span class="value">"3"</span></span><span class="attribute"> multiple</span><span class="attribute"> name=<span class="value">"hero[]"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">option</span><span class="attribute"> disabled</span>&gt;</span>Выберите героя<span class="tag">&lt;/<span class="keyword">option</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">option</span><span class="attribute"> value=<span class="value">"Чебурашка"</span></span>&gt;</span>Чебурашка<span class="tag">&lt;/<span class="keyword">option</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">option</span><span class="attribute"> selected</span><span class="attribute"> value=<span class="value">"Крокодил Гена"</span></span>&gt;</span>Крокодил Гена<span class="tag">&lt;/<span class="keyword">option</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">option</span><span class="attribute"> value=<span class="value">"Шапокляк"</span></span>&gt;</span>Шапокляк<span class="tag">&lt;/<span class="keyword">option</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">option</span><span class="attribute"> value=<span class="value">"Крыса Лариса"</span></span>&gt;</span>Крыса Лариса<span class="tag">&lt;/<span class="keyword">option</span>&gt;</span>
+   <span class="tag">&lt;/<span class="keyword">select</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+   <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"submit"</span></span><span class="attribute"> value=<span class="value">"Отправить"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">form</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+	<section role="article"><h1><span class="text-sise">Тег &lt;textarea&gt;</span></h1><h3>Описание</h3><p> Поле <span class="tag">&lt;textarea&gt;</span> представляет собой элемент 
+    формы для создания области, в которую можно вводить несколько строк текста. 
+    В отличие от тега <span class="tag">&lt;input&gt;</span> в текстовом поле допустимо 
+    делать переносы строк, они сохраняются при отправке данных на сервер.</p><p> Между тегами <span class="tag">&lt;textarea&gt;</span> и <span class="tag">&lt;/textarea&gt;</span> можно поместить любой текст, который будет отображаться внутри поля.</p><table style="width: 400px; margin: auto"><tbody><tr><td style="text-align:center"><textarea></textarea></td><td style="text-align:center"><textarea>Поле с исходным текстом</textarea></td></tr></tbody></table><h3> Синтаксис</h3><pre style="display: none;"><code class="no-buttons">&lt;textarea атрибуты&gt;
+  текст
+&lt;/textarea&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">textarea</span> атрибуты&gt;</span>
+  текст
+<span class="tag">&lt;/<span class="keyword">textarea</span>&gt;</span></code></pre><h3 class="exampleTitle">Пример</h3><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Тег TEXTAREA&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+
+  &lt;form action="textarea1.php" method="post"&gt;
+    &lt;p&gt;&lt;b&gt;Введите ваш отзыв:&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;textarea rows="10" cols="45" name="text"&gt;&lt;/textarea&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;input type="submit" value="Отправить"&gt;&lt;/p&gt;
+  &lt;/form&gt;
+
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE HTML&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Тег TEXTAREA<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="keyword">form</span><span class="attribute"> action=<span class="value">"textarea1.php"</span></span><span class="attribute"> method=<span class="value">"post"</span></span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">b</span>&gt;</span>Введите ваш отзыв:<span class="tag">&lt;/<span class="keyword">b</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">textarea</span><span class="attribute"> rows=<span class="value">"10"</span></span><span class="attribute"> cols=<span class="value">"45"</span></span><span class="attribute"> name=<span class="value">"text"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">textarea</span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="keyword">p</span>&gt;</span><span class="tag">&lt;<span class="keyword">input</span><span class="attribute"> type=<span class="value">"submit"</span></span><span class="attribute"> value=<span class="value">"Отправить"</span></span>&gt;</span><span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="keyword">form</span>&gt;</span>
+
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div></section>
+		</article>
+	</div>
+	<footer>
+		<div class="copyright">© 2023 Гатауллина Селина</div>
+		<div>
+			<a href="https://vk.com/school7birsk" target="_blank">МБОУ СОШ №7</a>
+		</div>
+	</footer>
+</body>
+</html>

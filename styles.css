@@ -1,0 +1,85 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
+@import "utils.css";
+
+:root {
+	font-family: Montserrat;
+}	
+body {
+	margin: 0;
+	padding: 0;
+	color: black;
+}
+
+.header-frame {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    border: none;
+    height: 100%;
+}
+
+footer {
+	background-color: black;
+	padding: 20px;
+	display: flex;
+	align-items: flex-end;
+	font-size: 13px;
+	justify-content: space-around;
+}
+footer a {
+    text-decoration: none;
+    color: #83555c;
+}
+.copyright {
+	color: #83555c;
+}
+
+.page {
+	display: flex;
+	margin-top: 80px;
+	min-height: calc(100vh - 180px);
+}
+.sidebar {
+	flex-grow: 0;
+	flex-shrink: 0;
+	padding: 10px 20px 100px 40px;
+}
+@media (max-width: 800px) {
+	.sidebar {
+		display: none;
+	}
+}
+.main {
+	flex: 1 1 100%;
+	padding: 10px 40px 100px 20px;
+	line-height: 1.5rem;
+	text-align: justify;
+	min-width: 300px;
+}
+
+@media (max-width: 800px) {
+	.main {
+		padding: 0 20px;
+	}
+}
+
+.iframe-sdb {
+	border: 0;
+	position: sticky;
+	top: 90px;
+	height: 400px;
+    width: 245px;
+}
+section img {
+	margin-top: 15px;
+	max-width: 100%;
+	height: auto;
+}
+
+.htmlbook-code {
+    overflow-y: hidden;
+    overflow-x: auto;
+    background: #cdcdcd;
+    padding: 10px;
+}
+
