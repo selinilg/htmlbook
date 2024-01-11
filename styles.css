@@ -15,7 +15,8 @@ body {
     top: 0;
     width: 100%;
     border: none;
-    height: 100%;
+    z-index: 1;
+    height: 80px;
 }
 
 footer {
@@ -42,13 +43,9 @@ footer a {
 .sidebar {
 	flex-grow: 0;
 	flex-shrink: 0;
-	padding: 10px 20px 100px 40px;
+	padding: 10px 20px 0 40px;
 }
-@media (max-width: 800px) {
-	.sidebar {
-		display: none;
-	}
-}
+
 .main {
 	flex: 1 1 100%;
 	padding: 10px 40px 100px 20px;
@@ -56,19 +53,27 @@ footer a {
 	text-align: justify;
 	min-width: 300px;
 }
-
 @media (max-width: 800px) {
+	.sidebar {
+		display: none;
+	}
+	.header-frame {
+		height: 360px;
+	}
 	.main {
 		padding: 0 20px;
 	}
+	footer {
+		margin-top: 50px;
+	}
 }
-
 .iframe-sdb {
 	border: 0;
 	position: sticky;
 	top: 90px;
 	height: 400px;
     width: 245px;
+    z-index: 0;
 }
 section img {
 	margin-top: 15px;
